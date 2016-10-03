@@ -26,24 +26,15 @@
         android:id="@+id/numbers"
         style="@style/CategoryStyle"
         android:background="@color/category_numbers"
-        android:text="@string/category_numbers" />
+        android:text="@string/category_state1" />
 
-    <TextView
-        android:id="@+id/family"
-        style="@style/CategoryStyle"
-        android:background="@color/category_family"
-        android:text="@string/category_family" />
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp" />
 
-    <TextView
-        android:id="@+id/colors"
-        style="@style/CategoryStyle"
-        android:background="@color/category_colors"
-        android:text="@string/category_colors" />
-
-    <TextView
-        android:id="@+id/phrases"
-        style="@style/CategoryStyle"
-        android:background="@color/category_phrases"
-        android:text="@string/category_phrases" />
 
 </LinearLayout>

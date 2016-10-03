@@ -17,6 +17,12 @@ package com.example.android.miwok;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+import java.util.StringTokenizer;
 
 public class NumbersActivity extends AppCompatActivity {
 
@@ -24,5 +30,13 @@ public class NumbersActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers);
+        ArrayList<Constituency> constituencies = new ArrayList<Constituency>();
+        for (int i = 0; i < 40; i++) constituencies.add(new Constituency("c" + i));
+        ConstituencyAdapter adapter=
+                new ConstituencyAdapter(this,constituencies);
+
+            ListView listView = (ListView) findViewById(R.id.list);
+            listView.setAdapter(adapter);
+
     }
 }
